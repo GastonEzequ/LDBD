@@ -19,6 +19,7 @@
 		<?php 
 			$sql="SELECT * from t_persona";
 			$result=mysqli_query($conexion,$sql);
+			
 			while($mostrar=mysqli_fetch_array($result)){
 		 	?>
 				<tr>
@@ -32,5 +33,10 @@
 			}	
 	 	?>
 	</table>
+		<form action="login.html" name="" method="POST">           
+			<tr>
+                <td><input type="submit" value="Volver" /> </td>
+            </tr>
+		</form>
 	</body>
 </html>

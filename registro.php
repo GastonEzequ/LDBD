@@ -39,7 +39,7 @@ $user = "root";
 $pass = "";
 $host = "localhost";
 
-//conetamos al base datos
+//conectamos la base de datos
 $connection = mysqli_connect($host, $user, $pass);
 
 //hacemos llamado al imput de formuario
@@ -49,7 +49,7 @@ $contrasena = $_POST["password"] ;
 //verificamos la conexion a base datos
 if(!$connection) 
         {
-            echo "No se ha podido conectar con el servidor" . mysql_error();
+            echo "No se ha podido conectar con el servidor" . mysqli_connect_error;
         }
   else
         {
@@ -93,7 +93,7 @@ echo "</tr>";
 while ($colum = mysqli_fetch_array($result))
  {
     echo "<tr>";
-     echo "<td><h2>" . $colum['usuario'] . "</td></h2>";
+    echo "<td><h2>" . $colum['usuario'] . "</td></h2>";
     echo "<td><h2>" . $colum['password'] . "</td></h2>";
     echo "</tr>";
 }

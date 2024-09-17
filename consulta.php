@@ -3,8 +3,9 @@
  ?>
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>mostrar datos</title>
+<center>	
+<head>
+		<title>Mostrar datos</title>
 	</head>
 	<body>
 	<br>
@@ -33,10 +34,11 @@
 			}	
 	 	?>
 	</table>
-		<form action="login.html" name="" method="POST">           
+		<form action="bienvenida.html" name="" method="POST">           
 			<tr>
                 <td><input type="submit" value="Volver" /> </td>
             </tr>
 		</form>
 	</body>
+	</center>
 </html>

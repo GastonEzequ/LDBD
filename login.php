@@ -20,7 +20,7 @@
 		//header("Location: pagina.html")
 		echo "Bienvenido:" .$nombre;
 	
-		echo"<script>window.location='consulta.php'</script>";
+		echo"<script>window.location='bienvenida.html'</script>";
 	}
 	else if ($nr == 0) 
 	{

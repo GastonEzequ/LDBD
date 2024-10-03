@@ -8,23 +8,27 @@
 	{
 		die("No hay conexión: ".mysqli_connect_error());
 	}
-
 	$nombre = $_POST["txtusuario"];
 	$pass = $_POST["txtpassword"];
-
-	$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '".$nombre."' and password = '".$pass."'");
+	$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '".$nombre."' and password = '".$pass."' and permiso = 3");
 	$nr = mysqli_num_rows($query);
-
-	if($nr == 1)
-	{
-		//header("Location: pagina.html")
-		echo "Bienvenido:" .$nombre;
-	
-		echo"<script>window.location='bienvenida.html'</script>";
-	}
-	else if ($nr == 0) 
-	{
-		//header("Location: login.html");
-		//echo "No ingreso"; 
-		echo "<script> alert('Error');window.location= 'login.html' </script>";
-	}
+	switch($nr){
+		case 1:
+			echo"<script>window.location='bienvenida3.html'</script>";
+		case 0: 
+			$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '".$nombre."' and password = '".$pass."' and permiso = 2");
+			$nr = mysqli_num_rows($query);
+				switch($nr){
+				case 1:
+					echo"<script>window.location='bienvenida2.html'</script>";
+				case 0:
+					$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '".$nombre."' and password = '".$pass."' and permiso = 1");
+					$nr = mysqli_num_rows($query);
+					switch($nr){
+						case 1:
+							echo"<script>window.location='bienvenida1.html'</script>";
+						case 0:
+							echo "<script> alert('Usuario no registrado');window.location= 'login.html' </script>";
+					}
+				}
+			}			

@@ -8,7 +8,9 @@
 	<br>
 	<table border="1" >
 		<tr>
-			<td>Usuario</td>
+        <td>ID</td>
+        <td>Permiso</td>
+        <td>Usuario</td>
 			<td>Contraseña</td>
 		</tr>
 
@@ -50,6 +52,9 @@ while ($colum = mysqli_fetch_array($result))
     
     ?> 
     <tr>
+    <td><?php echo $colum['id_usuario'] ?></td>
+    <td><?php echo $colum['permiso'] ?></td>
+    
     <td><?php echo $colum['usuario'] ?></td>
     <td><?php echo password_hash($colum['password'],PASSWORD_DEFAULT) ?></td>
     </tr>
@@ -70,7 +75,7 @@ while ($colum = mysqli_fetch_array($result))
 
 ?>
 </table>
-		<form action="bienvenida.html" name="" method="POST">      
+		<form action="bienvenida3.html" name="" method="POST">      
          
 			<tr>
                 <td><input type="submit" value="Volver" /> </td>

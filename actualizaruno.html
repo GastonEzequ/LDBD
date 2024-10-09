@@ -1,0 +1,50 @@
+
+<HTML>
+    <center>
+    
+        <body>
+            <table>
+                <h1>
+                    Modificar dato
+                </h1>
+    
+                <form action="actualizaruno.php" name="" method="POST">
+                <td><label>Ingrese ID</label></td>
+                <tr>
+                    <td><input type="number" name="pers_id" value="" required></td>
+                </tr>
+                <tr>
+                    <td><label>Elija dato a modificar:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="dato" value="nombre">Nombre</td>
+                </tr>
+                
+                <tr>
+                    <td><input type="radio" name="dato" value="apellido" >Apellido</td>
+                </tr>
+               
+                <tr>
+                    <td><input type="radio" name="dato" value="email">Email</td>
+                </tr>
+                
+                <tr>
+                    <td><input type="radio" name="dato" value="telefono" checked="checked">Telefono</td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="texto" value="" required></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Actualizar dato"/> </td>
+                </tr>
+                </form>
+                <form action="bienvenida.php">
+                    <tr>
+                        <td><input type="submit" value="Volver"/> </td>
+                    </tr>
+                </form>
+            </table>
+        </body>
+    </center>
+    
+    </HTML>

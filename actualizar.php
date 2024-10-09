@@ -22,7 +22,7 @@
             mysqli_close( $conexion );
 	 	?>
 	
-		<form action="bienvenida.html" name="" method="POST">      
+		<form action="bienvenida.php" name="" method="POST">      
         <tr>
                 <td><label>Los datos fueron actualizados exitosamente</label></td>
             </tr>     

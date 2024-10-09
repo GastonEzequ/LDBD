@@ -1,5 +1,3 @@
-
-<!DOCTYPE html>
 <html>
 <center>	
 <head>
@@ -21,7 +19,7 @@
             mysqli_close( $conexion );
 	 	?>
 	
-		<form action="bienvenida.html" name="" method="POST">      
+		<form action="bienvenida.php" name="" method="POST">      
         <tr>
                 <td><label>La persona fue creada exitosamente</label></td>
             </tr>     

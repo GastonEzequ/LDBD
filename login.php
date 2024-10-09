@@ -1,34 +1,81 @@
-<?php
-	$dbhost = "localhost";
-	$dbuser = "root";
-	$dbpass = "";
-	$dbname = "test";
-	$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-	if (!$conn) 
-	{
-		die("No hay conexión: ".mysqli_connect_error());
-	}
-	$nombre = $_POST["txtusuario"];
-	$pass = $_POST["txtpassword"];
-	$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '".$nombre."' and password = '".$pass."' and permiso = 3");
-	$nr = mysqli_num_rows($query);
-	switch($nr){
-		case 1:
-			echo"<script>window.location='bienvenida3.html'</script>";
-		case 0: 
-			$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '".$nombre."' and password = '".$pass."' and permiso = 2");
-			$nr = mysqli_num_rows($query);
-				switch($nr){
-				case 1:
-					echo"<script>window.location='bienvenida2.html'</script>";
-				case 0:
-					$query = mysqli_query($conn,"SELECT * FROM login WHERE usuario = '".$nombre."' and password = '".$pass."' and permiso = 1");
-					$nr = mysqli_num_rows($query);
-					switch($nr){
-						case 1:
-							echo"<script>window.location='bienvenida1.html'</script>";
-						case 0:
-							echo "<script> alert('Usuario no registrado');window.location= 'login.html' </script>";
-					}
-				}
-			}			
+<style>
+     body {
+      background-color: #22e95e;
+      margin: 0;
+      padding: 0;
+    }
+    table {
+        border: 2px solid #353A46;
+        background-color: #3ABAF1;
+    }
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 8px 20px;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: bold;
+        font-family: arial;
+    }
+
+    input[type=submit] {
+        background-color: #1C94C8;
+        color: white;
+        padding: 8px 10px;
+        margin: 8px 0px;
+        border: solid;
+        cursor: pointer;
+        width: 100%;
+    }
+</style>
+<html>
+<?php 
+session_start();
+session_destroy();
+?>
+<center>
+    <form method="post" action="bienvenida.php">
+        <table>
+            <tr>
+                <td colspan="2" style="background-color:#33A8DB; padding-bottom:5px; padding-top:5px;">
+                    <label>Login</label>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" rowspan="5"><img src="candado.png" /></td>
+                <td><label>Usuario</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="txtusuario" value="" required/></td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+            </tr>
+            <tr>
+                <td><input type="password" name="txtpassword" value="" required/> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Ingresar" /> </td>
+            </tr>
+        </table>
+    </form>
+    <form action="index.html" name="" method="POST">
+		<table>
+        	<tr>
+            	<td><input type="submit" value="Volver" /> </td>
+        	</tr>
+    	</table>
+    </form>
+</center>
+
+</html>

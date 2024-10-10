@@ -1,0 +1,7 @@
+index.hmtl ->  login.php -> bienvenida.php -> agregar_persona.html -> agregar_persona.php
+                                            -> consulta.php
+                                            ->  preactualizar.html ->  actualizar.html -> actualizar.php
+                                                                    ->  actualizaruno.html -> actualizaruno.php
+                                            -> eliminar_personas.html -> eliminar_personas.php
+                                          -> usuarios.php
+            ->  registro.html -> registro.php

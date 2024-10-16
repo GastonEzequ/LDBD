@@ -1,8 +1,12 @@
+<style type="text/css" media="screen">
+    @import 'Estilo.css';
+</style>
+
 <!DOCTYPE html>
 <html>
     <center>	
     <head>
-		<title>Agregar persona</title>
+		<h1>Mostrar usuarios</h1>
     </head>
     <body>
 	    <br>
@@ -49,11 +53,13 @@
 		}	
       ?>
 </table>
+<table>
 		<form action="bienvenida.php" name="" method="POST">      
  			<tr>
         <td><input type="submit" value="Volver" /> </td>
       </tr>
 		</form>
+    </table>
 	</body>
 	</center>
 </html>

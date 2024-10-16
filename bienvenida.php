@@ -1,7 +1,11 @@
+<style type="text/css" media="screen">
+    @import 'Estilo.css';
+</style>
 <HTML>
 <center>
     <body>
-<table>
+        <h1>Menu de usuario</h1>
+    <table>
        
 <?php
 	$dbhost = "localhost";

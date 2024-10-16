@@ -1,3 +1,7 @@
+<style type="text/css" media="screen">
+    @import 'Estilo.css';
+</style>
+
 <?php 
 	$conexion=mysqli_connect('localhost','root','','pruebas');
  ?>
@@ -5,12 +9,13 @@
 <html>
 <center>	
 <head>
-		<title>Mostrar datos</title>
+<h1>Mostrar datos</h1>	
+		
 	</head>
 	<body>
 	<br>
 	<table border="1" >
-		<tr>
+	<tr>
 			<td>id</td>
 			<td>nombre</td>
 			<td>apellido</td>
@@ -34,11 +39,13 @@
 			}	
 	 	?>
 	</table>
-		<form action="bienvenida.php" name="" method="POST">           
+			<table>
+	<form action="bienvenida.php" name="" method="POST">           
 			<tr>
                 <td><input type="submit" value="Volver" /> </td>
             </tr>
 		</form>
+		</table>
 	</body>
 	</center>
 </html>

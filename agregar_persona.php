@@ -1,3 +1,7 @@
+<style type="text/css" media="screen">
+    @import 'Estilo.css';
+</style>
+
 <html>
 <center>	
 <head>

@@ -1,0 +1,61 @@
+<style type="text/css" media="screen">
+    @import 'Estilo.css';
+</style>
+
+<HTML>
+    <center>
+    
+        <body>
+            <table>
+                <h1>
+                    Agregar Consulta
+                </h1>
+    
+                <form action="agregar_cons.php" name="" method="POST">
+                              
+                <tr>
+                    <td><label>Nro Historia Clinica:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="cons_hist" value=""></td>
+                </tr>
+                <tr>
+                    <td><label>Nro Matricula:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="cons_mat" value="" ></td>
+                </tr>
+                <tr>
+                    <td><label>Fecha y Hora:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="datetime-local" name="cons_fechor" value=""></td>
+                </tr>
+                <tr>
+                    <td><label>Diagnostico:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="cons_diag" value=""></td>
+                </tr>
+                <tr>
+                    <td><label>Tratamiento:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="cons_trat" value=""></td>
+                </tr>
+                <tr>
+ 
+                <tr>
+                    <td><input type="submit" value="Agregar"/> </td>
+                </tr>
+                </form>
+                <form action="bienvenida.php">
+                    <tr>
+                        <td><input type="submit" value="Volver"/> </td>
+                    </tr>
+                </form>
+            </table>
+        </body>
+    </center>
+    
+    </HTML>

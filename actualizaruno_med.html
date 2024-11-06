@@ -1,0 +1,61 @@
+<style type="text/css" media="screen">
+    @import 'Estilo.css';
+</style>
+
+<HTML>
+    <center>
+    
+        <body>
+            <table>
+                <h1>
+                    Modificar dato
+                </h1>
+    
+                <form action="actualizaruno_med.php" name="" method="POST">
+                
+                <tr>
+                    <td><label>Nro Matricula:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="med_mat" value=""></td>
+                </tr>
+                    <td><label>Elija dato a modificar:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="dato" value="med_ape">Apellido</td>
+                </tr>
+                
+                <tr>
+                    <td><input type="radio" name="dato" value="med_nom" >Nombre</td>
+                </tr>
+               
+                <tr>
+                    <td><input type="radio" name="dato" value="med_nac">Fecha de Nacimiento</td>
+                </tr>
+                
+                <tr>
+                    <td><input type="radio" name="dato" value="med_sex">Sexo</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="dato" value="med_esp" checked>Especialidad</td>
+                </tr>
+                </tr>
+                    <td><label>Ingrese dato a modificar:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="texto" value="" required></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Actualizar dato"/> </td>
+                </tr>
+                </form>
+                <form action="bienvenida.php">
+                    <tr>
+                        <td><input type="submit" value="Volver"/> </td>
+                    </tr>
+                </form>
+            </table>
+        </body>
+    </center>
+    
+    </HTML>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-09-2024 a las 01:59:42
+-- Tiempo de generación: 31-10-2024 a las 12:59:20
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `test`
 --
+CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `test`;
 
 -- --------------------------------------------------------
 
@@ -28,6 +30,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `login` (
+  `id_usuario` int(11) NOT NULL,
+  `permiso` int(11) NOT NULL DEFAULT 1,
   `usuario` varchar(60) NOT NULL,
   `password` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
@@ -36,14 +40,40 @@ CREATE TABLE `login` (
 -- Volcado de datos para la tabla `login`
 --
 
-INSERT INTO `login` (`usuario`, `password`) VALUES
-('1', '2'),
-('gaston', ''),
-('laura', ''),
-('jorge', ''),
-('Nico', ''),
-('Juan', ''),
-('3', '');
+INSERT INTO `login` (`id_usuario`, `permiso`, `usuario`, `password`) VALUES
+(1, 3, 'administrador', 'administrador'),
+(2, 2, 'gaston', '1234'),
+(3, 1, 'laura', ''),
+(4, 1, 'jorge', ''),
+(5, 1, 'Nico', ''),
+(6, 1, 'Juan', ''),
+(7, 1, '3', ''),
+(8, 1, '5', '6'),
+(9, 1, 'Enzo', '1234'),
+(10, 1, 'Ezequiel', '1234'),
+(11, 1, 'Flor', '1234'),
+(12, 1, 'Pedro', '1234'),
+(13, 1, 'Maria', 'maria1234');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id_usuario`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `login`
+--
+ALTER TABLE `login`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

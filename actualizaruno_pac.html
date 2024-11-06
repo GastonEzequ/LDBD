@@ -1,0 +1,67 @@
+<style type="text/css" media="screen">
+    @import 'Estilo.css';
+</style>
+
+<HTML>
+    <center>
+    
+        <body>
+            <table>
+                <h1>
+                    Modificar dato de Paciente
+                </h1>
+    
+                <form action="actualizaruno_pac.php" name="" method="POST">
+                
+                <tr>
+                    <td><label>Nro Historia Clinica:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="pac_hist" value=""></td>
+                </tr>
+                    <td><label>Elija dato a modificar:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="dato" value="pac_ape">Apellido</td>
+                </tr>
+                
+                <tr>
+                    <td><input type="radio" name="dato" value="pac_nom" >Nombre</td>
+                </tr>
+               
+                <tr>
+                    <td><input type="radio" name="dato" value="pac_nac">Fecha de Nacimiento</td>
+                </tr>
+                
+                <tr>
+                    <td><input type="radio" name="dato" value="pac_sex">Sexo</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="dato" value="pac_tipodoc" checked>Tipo de documento</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="dato" value="pac_dni">DNI</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="dato" value="pac_os">Codigo de Obra Social</td>
+                </tr>
+                </tr>
+                    <td><label>Ingrese dato a modificar:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="texto" value="" required></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Actualizar dato"/> </td>
+                </tr>
+                </form>
+                <form action="bienvenida.php">
+                    <tr>
+                        <td><input type="submit" value="Volver"/> </td>
+                    </tr>
+                </form>
+            </table>
+        </body>
+    </center>
+    
+    </HTML>

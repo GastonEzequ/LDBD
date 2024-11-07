@@ -10,7 +10,47 @@
             <h1>
                 Modificar datos Consultas No disponible
             </h1>
-        </form>
+            <form action="actualizar_cons.php" name="" method="POST">
+            <tr>
+                <td><label>Nro Consulta:</label></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="cons_num" value=""></td>
+            </tr>
+            <tr>
+                <td><label>Nro Historia Clinica:</label></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="cons_hist" value="" ></td>
+            </tr>
+            <tr>
+                <td><label>Nro Matricula Medico:</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="cons_mat" value=""></td>
+            </tr>
+            <tr>
+                <td><label>Fecha y Hora Consulta:</label></td>
+            </tr>
+            <tr>
+                <td><input type="datetime-local" name="cons_fechor" value=""></td>
+            </tr>
+            <tr>
+                <td><label>Diagnostico:</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="cons_diag" value=""></td>
+            </tr>
+            <tr>
+                <td><label>Tratamiento:</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="cons_trat" value=""></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Actualizar datos"/> </td>
+            </tr>
+            </form>
         <form action="bienvenida.php">
             <tr>
                 <td><input type="submit" value="Volver"/> </td>

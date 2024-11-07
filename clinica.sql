@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-10-2024 a las 12:57:14
+-- Tiempo de generación: 07-11-2024 a las 01:32:55
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -30,6 +30,7 @@ USE `clinica`;
 --
 
 CREATE TABLE `consultas_medicas` (
+  `nro_consulta` int(11) NOT NULL,
   `nro_historia_clinica` int(11) NOT NULL,
   `nro_matricula` int(11) DEFAULT NULL,
   `fecha_hora_consulta` datetime DEFAULT NULL,
@@ -41,11 +42,12 @@ CREATE TABLE `consultas_medicas` (
 -- Volcado de datos para la tabla `consultas_medicas`
 --
 
-INSERT INTO `consultas_medicas` (`nro_historia_clinica`, `nro_matricula`, `fecha_hora_consulta`, `diagnostico`, `tratamiento_recomendado`) VALUES
-(1002, 298987, '2000-11-12 13:30:00', 'Gripe', 'Reposo 7 días.'),
-(2008, 298987, '2001-02-13 15:00:00', 'Fractura de fémur', 'Yeso durante 30 días.'),
-(4323, 230989, '2001-02-13 16:00:00', 'Miopía', 'Anteojos con mayor aumento.'),
-(8787, 89897, '2001-02-14 16:30:00', 'Dolor de espalda', 'Faja y analgésicos.');
+INSERT INTO `consultas_medicas` (`nro_consulta`, `nro_historia_clinica`, `nro_matricula`, `fecha_hora_consulta`, `diagnostico`, `tratamiento_recomendado`) VALUES
+(1, 1002, 298987, '2000-11-12 13:30:00', 'Gripe', 'Reposo 7 días.'),
+(2, 2008, 298987, '2001-02-13 15:00:00', 'Fractura de fémur', 'Yeso durante 30 días.'),
+(3, 4323, 230989, '2001-02-13 16:00:00', 'Miopía', 'Anteojos con mayor aumento.'),
+(4, 8787, 89897, '2001-02-14 16:30:00', 'Dolor de espalda', 'Faja y analgésicos.'),
+(7, 1002, 108789, '2024-11-20 10:00:00', '', '');
 
 -- --------------------------------------------------------
 
@@ -65,7 +67,8 @@ CREATE TABLE `especialidades` (
 INSERT INTO `especialidades` (`especialidad`, `denominacion`) VALUES
 ('CA', 'Cardiología'),
 ('CM', 'Clínica Médica'),
-('OF', 'Oftalmología');
+('OF', 'Oftalmología'),
+('FO', 'Fonoaudiologia');
 
 -- --------------------------------------------------------
 
@@ -153,7 +156,7 @@ INSERT INTO `pacientes` (`NroHistoriaClinica`, `Apellido`, `Nombre`, `FechaNacim
 -- Indices de la tabla `consultas_medicas`
 --
 ALTER TABLE `consultas_medicas`
-  ADD PRIMARY KEY (`nro_historia_clinica`);
+  ADD PRIMARY KEY (`nro_consulta`);
 
 --
 -- Indices de la tabla `medicos`
@@ -172,6 +175,16 @@ ALTER TABLE `obras_sociales`
 --
 ALTER TABLE `pacientes`
   ADD PRIMARY KEY (`NroHistoriaClinica`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `consultas_medicas`
+--
+ALTER TABLE `consultas_medicas`
+  MODIFY `nro_consulta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

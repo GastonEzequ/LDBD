@@ -2,11 +2,10 @@
     @import 'Estilo.css';
 </style>
 
+<!DOCTYPE html>
 <html>
 <center>	
-<head>
-		<title>Agregar Consulta</title>
-	</head>
+
 	<body>
 	<br>
 	
@@ -14,21 +13,22 @@
 	$conexion=mysqli_connect('localhost','root','','clinica');
 
     //hacemos llamado al input de formulario
+    $id = $_POST["cons_num"] ;
     $hist=$_POST["cons_hist"];
     $matricula = $_POST["cons_mat"] ;
     $fechahora = $_POST["cons_fechor"] ;
     $diagnostico = $_POST["cons_diag"] ;
-    $tratamiento = $_POST["cons_trat"] ;
-    
-    $sql="INSERT INTO consultas_medicas (nro_historia_clinica  , nro_matricula, fecha_hora_consulta, diagnostico, tratamiento_recomendado) 
-    VALUES('$hist', '$matricula','$fechahora', '$diagnostico','$tratamiento')";
+    $tratamiento = $_POST["cons_trat"] ;	
+
+    $sql="UPDATE consultas_medicas SET nro_historia_clinica='$hist', nro_matricula='$matricula', fecha_hora_consulta='$fechahora', 
+            diagnostico='$diagnostico', tratamiento_recomendado='$tratamiento'  WHERE nro_consulta  ='$id'";
 			$result=mysqli_query($conexion,$sql);
             mysqli_close( $conexion );
 	 	?>
 	
 		<form action="bienvenida.php" name="" method="POST">      
         <tr>
-                <td><label>La Consulta fue creado exitosamente</label></td>
+                <td><label>Los datos fueron actualizados exitosamente</label></td>
             </tr>     
 			<tr>
                 <td><input type="submit" value="Volver" /> </td>

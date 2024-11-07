@@ -11,7 +11,46 @@
                     Modificar dato no disponible
                 </h1>
     
-                </form>
+                <form action="actualizaruno_cons.php" name="" method="POST">
+                
+                    <tr>
+                        <td><label>Nro Consulta:</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="cons_num" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><label>Elija dato a modificar:</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="dato" value="cons_hist">Nro Historia Clinica</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="radio" name="dato" value="cons_mat" >Nro Matricula Medico</td>
+                    </tr>
+                   
+                    <tr>
+                        <td><input type="radio" name="dato" value="cons_fechor" checked>Fecha y Hora Consulta</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="radio" name="dato" value="cons_diag">Diagnostico</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="dato" value="cons_trat">Tratamiento</td>
+                    </tr>
+                    </tr>
+                        <td><label>Ingrese dato a modificar:</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="texto" value="" required></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Actualizar dato"/> </td>
+                    </tr>
+                    </form>
+                   
                 <form action="bienvenida.php">
                     <tr>
                         <td><input type="submit" value="Volver"/> </td>

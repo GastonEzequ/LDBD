@@ -8,10 +8,20 @@
     <body>
         <table>
             <h1>
-                Eliminar consulta no disponible
+                Eliminar consulta
             </h1>
+            <form action="eliminar_cons.php" name="" method="POST">
 
-         
+                <tr>
+                    <td><label>Nro Consulta:</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" name="cons_num" value=""></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Eliminar"/> </td>
+                </tr>
+            </form>
             <form action="bienvenida.php">
                 <tr>
                     <td><input type="submit" value="Volver"/> </td>
